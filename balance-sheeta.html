@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta chqrset="utf-8"> 
+  <meta name="description" content="balance-sheet-pseudo-selectors"> 
+  <meta name="viewport" content="width=device-width, inscale-scale=1.0"> 
+  <link rel="stylesheet" href="styles.css"> 
+  <title>Balance sheet using Pseudo Selectors</title> 
+ <style type="text/css" id="dcoder_stylesheet">html{box-sizing: border-box;}
+p{text-align: center; text-decoration: underline; font-style: italic;}
+body{font-family: sans-serif; color: rgb(0, 0, 0);}
+span[class~="sr-only"]{border: 0 !important; clip: rect(1px, 1px, 1px, 1px) !important; clip-path: inset(50%) !important; height: 1px !important; width: 1px !important; overflow: hidden !important; white-space: nowrap !important; position: absolute !important; padding: 0 !important; margin: -1px !important;}
+section{width: 40rem; max-width: 90vw; margin: 0 auto; border: 2px solid #d0d0d5;}
+h1{text-align: center; text-transform: uppercase;}
+h2{margin-left: 5px; font-weight: bold;}
+tr.data td:last-of-type{padding-right: 0.5rem;}
+.table-wrap{padding: 0 0.75rem 1.5rem 0.75rem;}
+tr.data td{vertical-align: top; text-align: right; padding: 0.3rem 0.25rem 0;}
+tr.data th .description{display: block; font-style: italic; font-weight: normal; padding: 1rem 0 0.75rem; margin-right: -13.5rem;}
+tr.data th{text-align: left; padding-top: 0.3rem; padding-left: 0.5rem;}
+tr[class="data"]{background: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);}
+tr.total td:nth-of-type(3){padding-right: 0.5rem;}
+tr.total:hover{background-color: #99c9ff;}
+td[class="current"]{font-style: italic;}
+tr[class="total"] th{text-align: left; padding: 0.5rem 0 0.25rem 0.5rem;}
+tbody th{width: calc(100% -12rem);}
+tr.total td{text-align: right; padding: 0 0.25rem;}
+tbody td{width: 100vw; max-width: 4rem;}
+tr[class="total"]{border-bottom: 4px double #0a0a23; font-weight: bold;}
+table caption{color: #356eaf; font-size: 1.3em; font-weight: normal; position: absolute; top: -2.25rem; left: 0.5rem;}
+table{border-collapse: collapse; border: 0; width: 100%; margin-top: 3rem; position: relative;}
+#years span[class]{font-weight: bold; width: 4.5rem; text-align: right;}
+#years{display: flex; margin: 0 -2px; z-index: 999; padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0; justify-content: flex-end; position: sticky; top: 0; background-color: rgb(0, 0, 0); color: rgb(255, 255, 255); }</style></head> 
+ <body> 
+  <section> 
+   <h1>Ayomide Investment and Firms Ltd.</h1> 
+   <p>Est. 2022</p> 
+   <h2>Balance sheet</h2> 
+   <div id="years" aria-hidden="true"> <span class="year">2019</span> <span class="year">2020</span> <span class="year">2021</span> 
+   </div> 
+   <div class="table-wrap"> 
+    <table> 
+     <caption>
+       Assets 
+     </caption> 
+     <thead> 
+      <tr> 
+       <td></td> 
+       <th><span class="sr-only year">2019</span></th> 
+       <th><span class="sr-only year">2020</span></th> 
+       <th class="current"><span class="sr-only year">2021</span></th> 
+      </tr> 
+     </thead> 
+     <tbody> 
+      <tr class="data"> 
+       <th>Cash <span class="description">This is the only cash we have on hand.</span></th> 
+       <td>$30</td> 
+       <td>$40</td> 
+       <td class="current">$20</td> 
+      </tr> 
+      <tr class="data"> 
+       <th>Crypto <span class="description">We bought some crypto in dollars.</span></th> 
+       <td>$500</td> 
+       <td>$1,200</td> 
+       <td class="current">$1,000</td> 
+      </tr> 
+      <tr class="data"> 
+       <th>Cars <span class="description">We bought cars as investment.</span></th> 
+       <td>$400,000</td> 
+       <td>$250,000</td> 
+       <td class="current">$123,650</td> 
+      </tr> 
+      <tr class="total"> 
+       <th>Total <span class="sr-only">Assets</span></th> 
+       <td>$90</td> 
+       <td>$2,700</td> 
+       <td class="current">$773,650</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <table> 
+     <caption>
+       Liabilities 
+     </caption> 
+     <thead> 
+      <tr> 
+       <td></td> 
+       <th><span class="sr-only">2019</span></th> 
+       <th><span class="sr-only">2020</span></th> 
+       <th><span class="sr-only">2021</span></th> 
+      </tr> 
+     </thead> 
+     <tbody> 
+      <tr class="data"> 
+       <th>Electricity <span class="description">Cost of Electric appliances used day-to-day.</span></th> 
+       <td>$12,000</td> 
+       <td>$18500</td> 
+       <td class="current">$15,780</td> 
+      </tr> 
+      <tr class="data"> 
+       <th>Transportation <span class="description">Cost of transporting goods and personnel.</span></th> 
+       <td>$680</td> 
+       <td>$1,200</td> 
+       <td class="current">$780.56</td> 
+      </tr> 
+      <tr class="data"> 
+       <th>Internet <span class="description">Cost of network subscriptions.</span></th> 
+       <td>$700</td> 
+       <td>$580</td> 
+       <td class="current">$920</td> 
+      </tr> 
+      <tr class="total"> 
+       <th>Total <span class="sr-only">Liabilities</span></th> 
+       <td>$46,280</td> 
+       <td>$2,660.56</td> 
+       <td class="current">$2,200</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+    <table> 
+     <caption>
+       Net Worth 
+     </caption> 
+     <thead> 
+      <tr> 
+       <td></td> 
+       <th><span class="sr-only year">2019</span></th> 
+       <th><span class="sr-only year">2020</span></th> 
+       <th><span class="sr-only year">2021</span></th> 
+      </tr> 
+     </thead> 
+     <tbody> 
+      <tr class="total"> 
+       <th>Total <span class="sr-only">Net Worth</span></th> 
+       <td>$340,400</td> 
+       <td>$400,690</td> 
+       <td class="current">$900,000</td> 
+      </tr> 
+     </tbody> 
+    </table> 
+   </div> 
+  </section> 
+ 
+</body></html>
